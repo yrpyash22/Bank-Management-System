@@ -131,20 +131,8 @@ USE bankSystem;
 Stores personal information of users.
 
 ```sql
-CREATE TABLE signup(
-    form_no VARCHAR(20),
-    name VARCHAR(100),
-    father_name VARCHAR(100),
-    dob VARCHAR(50),
-    gender VARCHAR(20),
-    email VARCHAR(100),
-    marital_status VARCHAR(50),
-    address VARCHAR(255),
-    city VARCHAR(100),
-    pincode VARCHAR(20),
-    state VARCHAR(100),
-    country VARCHAR(100)
-);
+create table signup(form_no varchar(30), name varchar(30), father_name varchar(30), DOB varchar(30), gender varchar(30), email varchar(60), marital_status varchar(30), address varchar(60), city varchar(30), pincode varchar(30), state varchar(50), country varchar(30));
+select * from signup;
 ```
 
 ---
@@ -154,18 +142,8 @@ CREATE TABLE signup(
 Stores additional customer information.
 
 ```sql
-CREATE TABLE signup_two(
-    form_no VARCHAR(20),
-    religion VARCHAR(50),
-    category VARCHAR(50),
-    income VARCHAR(50),
-    education VARCHAR(100),
-    occupation VARCHAR(100),
-    pan VARCHAR(20),
-    aadhar VARCHAR(20),
-    senior_citizen VARCHAR(10),
-    existing_account VARCHAR(10)
-);
+create table signup_two(form_no varchar(30), religion varchar(30), category varchar(30), income varchar(50), education varchar(30), occupation varchar(60), pan varchar(30), aadhar varchar(60), senior_citizen varchar(30), existing_account varchar(30));
+select * from signup_two;
 ```
 
 ---
@@ -175,13 +153,8 @@ CREATE TABLE signup_two(
 Stores account details and services selected by the customer.
 
 ```sql
-CREATE TABLE signup_three(
-    form_no VARCHAR(20),
-    account_type VARCHAR(100),
-    card_number VARCHAR(20),
-    pin VARCHAR(10),
-    services VARCHAR(255)
-);
+create table signup_three( form_no varchar(30), account_Type varchar(50), card_number varchar(40), pin varchar(30), facility varchar(200));
+select * from signup_three;
 ```
 
 ---
@@ -191,11 +164,8 @@ CREATE TABLE signup_three(
 Stores ATM login credentials.
 
 ```sql
-CREATE TABLE login(
-    form_no VARCHAR(20),
-    card_number VARCHAR(20),
-    pin VARCHAR(10)
-);
+create table login(form_no varchar(30), card_number varchar(50), pin varchar(30));
+select * from login;
 ```
 
 ---
@@ -205,12 +175,8 @@ CREATE TABLE login(
 Stores all banking transactions.
 
 ```sql
-CREATE TABLE bank(
-    pin VARCHAR(10),
-    date VARCHAR(100),
-    type VARCHAR(50),
-    amount VARCHAR(20)
-);
+create table bank(pin varchar(10), date varchar(50), type varchar(20), amount varchar(20));
+select * from bank;
 ```
 
 ---
@@ -374,3 +340,5 @@ Java Developer | JDBC | MySQL | Swing GUI Development
 ---
 
 ⭐ If you found this project useful, consider giving it a star on GitHub.
+
+
